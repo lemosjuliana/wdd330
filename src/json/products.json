@@ -1,0 +1,39 @@
+ [
+      {
+        "Id": "F1",
+        "Image": "red.jpg",
+        "Name": "Red Fruits Pack",
+        "FinalPrice": 12.99
+      },
+      {
+        "Id": "B2",
+        "Image": "bar.jpg",
+        "Name": "Cereal Bar",
+        "FinalPrice": 1.50
+      },
+      {
+        "Id": "V3",
+        "Image": "veggie.jpg",
+        "Name": "Green Veggies Pack",
+        "FinalPrice": 15.99
+      },
+      {
+        "Id": "J4",
+        "Image": "juice.jpg",
+        "Name": "Organic Juice",
+        "FinalPrice": 3.99
+      },
+      {
+        "Id": "S5",
+        "Image": "smoothie.jpg",
+        "Name": "Green Smoothie",
+        "FinalPrice": 5.25
+      },
+      {
+        "Id": "F6",
+        "Image": "citrus.jpg",
+        "Name": "Citrus Fruits Pack",
+        "FinalPrice": 6.50
+      }
+    ]
+  
