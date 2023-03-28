@@ -1,39 +1,50 @@
- [
-      {
-        "Id": "F1",
-        "Image": "red.jpg",
-        "Name": "Red Fruits Pack",
-        "FinalPrice": 12.99
-      },
-      {
-        "Id": "B2",
-        "Image": "bar.jpg",
-        "Name": "Cereal Bar",
-        "FinalPrice": 1.50
-      },
-      {
-        "Id": "V3",
-        "Image": "veggie.jpg",
-        "Name": "Green Veggies Pack",
-        "FinalPrice": 15.99
-      },
-      {
-        "Id": "J4",
-        "Image": "juice.jpg",
-        "Name": "Organic Juice",
-        "FinalPrice": 3.99
-      },
-      {
-        "Id": "S5",
-        "Image": "smoothie.jpg",
-        "Name": "Green Smoothie",
-        "FinalPrice": 5.25
-      },
-      {
-        "Id": "F6",
-        "Image": "citrus.jpg",
-        "Name": "Citrus Fruits Pack",
-        "FinalPrice": 6.50
-      }
-    ]
-  
+[
+  {
+    "Id": "F1",
+    "Image": "red.jpg",
+    "Name": "Red Fruits Pack",
+    "FinalPrice": 12.99,
+    "Url": "/api/1.0/product/F1/",
+    "ProductsUrl": "/api/1.0/products/Red-Fruits-Pack/"
+  },
+  {
+    "Id": "B2",
+    "Image": "bar.jpg",
+    "Name": "Cereal Bar",
+    "FinalPrice": 1.5,
+    "Url": "/api/1.0/product/B2/",
+    "ProductsUrl": "/api/1.0/products/Cereal-Bar/"
+  },
+  {
+    "Id": "V3",
+    "Image": "veggie.jpg",
+    "Name": "Green Veggies Pack",
+    "FinalPrice": 15.99,
+    "Url": "/api/1.0/product/V3/",
+    "ProductsUrl": "/api/1.0/products/Green-Veggies-Pack/"
+  },
+  {
+    "Id": "J4",
+    "Image": "juice.jpg",
+    "Name": "Organic Juice",
+    "FinalPrice": 3.99,
+    "Url": "/api/1.0/product/J4/",
+    "ProductsUrl": "/api/1.0/products/Organic-Juice/"
+  },
+  {
+    "Id": "S5",
+    "Image": "smoothie.jpg",
+    "Name": "Green Smoothie",
+    "FinalPrice": 5.25,
+    "Url": "/api/1.0/product/S5/",
+    "ProductsUrl": "/api/1.0/products/Green-Smoothie/"
+  },
+  {
+    "Id": "F6",
+    "Image": "citrus.jpg",
+    "Name": "Citrus Fruits Pack",
+    "FinalPrice": 6.5,
+    "Url": "/api/1.0/product/F6/",
+    "ProductsUrl": "/api/1.0/products/Citrus-Fruits-Pack/"
+  }
+]
