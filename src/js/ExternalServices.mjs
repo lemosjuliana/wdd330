@@ -1,6 +1,6 @@
 //const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
 //const baseURL = "https://wdd330-backend.vercel.app/";
-const baseURL = "http://localhost:3000/";
+const baseURL = "http://localhost:3000/json/products.json/";
 
 async function convertToJson(res) {
   const data = await res.json();
@@ -17,8 +17,8 @@ export default class ExternalServices {
     // this.category = category;
     // this.path = `../json/${this.category}.json`;
   }
-  async getData(category) {
-    const response = await fetch(baseURL + `products/search/${category}`);
+  async getData(name) {
+    const response = await fetch(baseURL + `products/${name}`);
     const data = await convertToJson(response);
     return data.Result;
 }
@@ -61,4 +61,5 @@ export default class ExternalServices {
     return response;
 
   }
+  
 }
