@@ -257,7 +257,7 @@ picture {
   text-align: left;
 }
 
-/* ###### FRESH PAGE ###### */
+/* ###### PRODUCTS PAGE ###### */
 
 .fresh-title {
   text-align: center;
@@ -353,6 +353,45 @@ form label.application input:valid {
 fieldset {
   border: none;
 }
+.product-title{
+  text-transform: capitalize; 
+} 
+.products {
+  padding: 0.5em;
+}
+.product-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  
+}
+.product-list a {
+  text-decoration: none;
+  color: black;
+  
+}
+.list-total {
+  text-align: right;
+}
+.list-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5em;
+}
+.list-footer > a {
+  /* display: block; */
+  padding: 0.3em 0.5em;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.list-footer a:link,
+.list-footer a:visited {
+  color: var(--dark-grey);
+}
 
 /* ###### ABOUT US ###### */
 
@@ -409,32 +448,6 @@ iframe {
 .reference-img {
   display: block;
   margin-bottom: 20px;
-}
-
-
-/* ###### PRODUCT-LISTING ###### */
-
-
-.products {
-  padding: 0.5em;
-}
-
-.product-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  list-style-type: none;
-  padding: 0;
-  
-}
-.product-list a {
-  text-decoration: none;
-  color: var(--dark-grey);
-  
-}
-
-.list-total {
-  text-align: right;
 }
 
 /* ###### FOOTER ###### */
