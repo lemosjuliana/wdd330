@@ -1,20 +1,20 @@
+
 import { renderListWithTemplate } from "./utils.mjs";
 
 // ProductList.mjs
 function productCardTemplate(product) {
-  let discount = (((product.FinalPrice - product.SuggestedRetailPrice) / product.SuggestedRetailPrice) * 100) 
-  let discountRounded = Math.round(discount)
-
+  //const imageURL = window.location.origin + "/public/images/";  
+  const imageURL = "/images/";  
   return `<li class="product-card">
   <a href="/product_pages/index.html?product=${product.Id}">
   <img
-    src="${product.Images.PrimaryMedium}"
+    src="${imageURL + product.Image}"
     alt="Image of ${product.Name}"
   />
-  <h3 class="card__brand">${product.Brand.Name}</h3>
   <h2 class="card__name">${product.Name}</h2>
-  <p class="product-card_discount_list">-${discountRounded}% OFF</p></a>
   <p class="product-card__price">$${product.FinalPrice}</p></a>
+  <button id="add-to-cart">Buy now</button>
+  <p></a>
 </li>`
 } 
 
@@ -38,3 +38,13 @@ export default class ProductListing {
     renderListWithTemplate(productCardTemplate, this.listElement, list);
   }
 }
+
+const addToCartButton = document.getElementById("add-to-cart");
+
+addToCartButton.addEventListener("click", function() {
+  
+  console.log("Product added to cart!");
+});
+
+
+
