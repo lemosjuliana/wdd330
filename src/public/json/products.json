@@ -1,50 +1,38 @@
 [
   {
   "Id": "fp001",
-  "Image": "../public/images/fp001.jpg",
+  "Image": "fp001.jpg",
   "Name": "Red Fruits Pack",
-  "FinalPrice": 12.99,
-  "Url": "/api/1.0/product/fp001/",
-  "ProductsUrl": "/api/1.0/products/Red-Fruits-Pack/"
+  "FinalPrice": 12.99
   },
   {
   "Id": "cb001",
-  "Image": "../public/images/cb001.jpg",
+  "Image": "cb001.jpg",
   "Name": "Cereal Bar",
-  "FinalPrice": 1.5,
-  "Url": "/api/1.0/product/cb001/",
-  "ProductsUrl": "/api/1.0/products/Cereal-Bar/"
+  "FinalPrice": 1.5
   },
   {
   "Id": "gv001",
-  "Image": "../public/images/gv001.jpg",
+  "Image": "gv001.jpg",
   "Name": "Green Veggies Pack",
-  "FinalPrice": 15.99,
-  "Url": "/api/1.0/product/gv001/",
-  "ProductsUrl": "/api/1.0/products/Green-Veggies-Pack/"
+  "FinalPrice": 15.99
   },
   {
   "Id": "oj001",
-  "Image": "../public/images/oj001.jpg",
+  "Image": "oj001.jpg",
   "Name": "Organic Juice",
-  "FinalPrice": 3.99,
-  "Url": "/api/1.0/product/oj001/",
-  "ProductsUrl": "/api/1.0/products/Organic-Juice/"
+  "FinalPrice": 3.99
   },
   {
   "Id": "s001",
-  "Image": "../public/images/s001.jpg",
+  "Image": "s001.jpg",
   "Name": "Green Smoothie",
-  "FinalPrice": 5.25,
-  "Url": "/api/1.0/product/s001/",
-  "ProductsUrl": "/api/1.0/products/Green-Smoothie/"
+  "FinalPrice": 5.25
   },
   {
   "Id": "fp002",
-  "Image": "../public/images/fp002.jpg",
+  "Image": "fp002.jpg",
   "Name": "Citrus Fruits Pack",
-  "FinalPrice": 6.5,
-  "Url": "/api/1.0/product/fp002/",
-  "ProductsUrl": "/api/1.0/products/Citrus-Fruits-Pack/"
+  "FinalPrice": 6.5
   }
   ]
