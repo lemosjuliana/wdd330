@@ -7,6 +7,7 @@ body {
 }
 h1 {
   font-family: "Secular One", sans-serif;
+  text-align: center;
 }
 p {
   font-family: "Open Sans", sans-serif;
@@ -353,8 +354,10 @@ form label.application input:valid {
 fieldset {
   border: none;
 }
-.product-title{
+.headings-products{
+  color:#d53344;
   text-transform: capitalize; 
+  font-size: 30px;
 } 
 .products {
   padding: 0.5em;
@@ -368,8 +371,10 @@ fieldset {
   
 }
 .product-list a {
+  font-family: "Secular One", sans-serif;
   text-decoration: none;
   color: black;
+  text-align: center;
   
 }
 .list-total {
@@ -392,6 +397,18 @@ fieldset {
 .list-footer a:visited {
   color: var(--dark-grey);
 }
+
+.cart {
+  text-align: center;
+  margin: 80px;
+}
+/* ###### SHOPPING CART ###### */
+
+.headings-cart{
+  color:#d53344;
+  text-transform: capitalize; 
+  font-size: 30px;
+} 
 
 /* ###### ABOUT US ###### */
 
