@@ -7,74 +7,29 @@
     <meta name="description" content="Eat Fresh Page created by
     Juliana Jesus Lemos in WDD 330 at
     Brigham Young University - Idaho">
-    <title>Bountiful Foods</title>
+    <title>Eat Fresh</title>
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Secular+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="../js/checkout.js "type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/cart.js" type="module"></script>
+  </head>
 
-</head><body>
-  <header class="divider" id="main-header"></header>
+  <body>
+    <header class="active" id="main-header"></header>
 
-  <main class="divider">
-    <h2>Review & Place your Order</h2>
-    <section class="checkout-form">
-      <form name="checkout">
-        <fieldset>
-          <legend>Shipping</legend>
-          <div class="checkout__name">
-            <label for="fname">First Name</label>
-            <input type="fname" required>
-            <label for="lname">Last Name</label>
-            <input type="lname" required>
-            </div>
-          <div class="checkout__address">
-            <label for="street">Street</label>
-            <input type="street" required>
-            <label for="city">City</label>
-            <input type="text" required>
-            <label for="state">State</label>
-            <input type="state" required>
-            <label for="zip">Zip</label>
-            <input type="zip" required>
-          </div>
-        </fieldset>
-        <fieldset class="checkout-summary">
-          <legend>Payment</legend>
-          <label for="card-number">Card Number</label>
-          <input type="card-number" required>
-          <label for="expiration">Expiration</label>
-          <input type="expiration" required>
-          <label for="security-code">Security Code</label>
-          <input type="security-code">
-        </fieldset>
-        <fieldset>
-          <legend>Order Summary</legend>
-          <ul>
-            <li>
-              <label for="items-subtotal">Items Subtotal <span id="number-items"></span></label>
-              <p id="cart-total"></p>
-            </li>
-            <li>
-              <label for="estimate">Shipping Estimate</label>
-              <p id="estimate"></p>
-            </li>
-            <li>
-              <label for="tax">Tax</label>
-              <p id="tax-total"></p>
-            </li>
-            <li>
-              <label for="order-total"><b>Order Total</b></label>
-              <p id="order-total"></p>
-            </li>
-          </ul>
-        </fieldset>
-        <button id="checkoutSubmit" type="submit">Checkout</button>
-      </form>
-    </section>
-  </main>
+    <main class="divider">
+      <section class="products">
+        <h1 class="headings-cart">MY CART</h1>
+
+        <ul class="product-list"></ul>
+      
+        <div class="list-footer hide">
+          <p class="cart-total">Total: </p>
+        </div>
+      </section>
+    </main>
 
   <footer id="main-footer">
   </footer>
