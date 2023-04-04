@@ -16,15 +16,26 @@ productList.addEventListener("click", (event => {
 function shoppingCartTemplate(item) {
   const newItem = `
   <div class="shopping-cart"
+  <div class="item">
+  <div class="buttons">
+          <span class="delete-btn"></span>
+          <span class="like-btn"></span>
   <li class="cart-card divider">
     <a href="#">
       <h2 class="card__name">${item.Name}</h2>
     </a>
-    <p class="cart-card__quantity">qty: 1</p>
+
+    <button type="button" class="quantity-button" data-action="decrease">-</button>
+    <input type="number" class="cart-card__quantity" name="quantity" value="1" min="1" max="10">
+    <button type="button" class="quantity-button" data-action="increase">+</button>
+  
     <p class="cart-card__price">$${item.FinalPrice}</p>
     <span class="remove-item" data-id="${item.Id}">X</span>
   </li>
-  </div>`;
+  </div>
+  </div>
+  <button class="clear-cart-button">Clear Cart</button>
+  `;
 
   return newItem;
   }
