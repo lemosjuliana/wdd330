@@ -14,14 +14,17 @@ productList.addEventListener("click", (event => {
 }));
 
 function shoppingCartTemplate(item) {
-  const newItem = `<li class="cart-card divider">
+  const newItem = `
+  <div class="shopping-cart"
+  <li class="cart-card divider">
     <a href="#">
       <h2 class="card__name">${item.Name}</h2>
     </a>
     <p class="cart-card__quantity">qty: 1</p>
     <p class="cart-card__price">$${item.FinalPrice}</p>
     <span class="remove-item" data-id="${item.Id}">X</span>
-  </li>`;
+  </li>
+  </div>`;
 
   return newItem;
   }
