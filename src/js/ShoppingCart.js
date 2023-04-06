@@ -1,100 +1,106 @@
-import { getLocalStorage } from "./utils.mjs";
-//???????????
-import   calculateOrderTotal from "./CheckoutProcess.mjs";
+import { deleteLocalStorage, getLocalStorage, setLocalStorage } from "./utils.mjs";
 
-const productList = document.querySelector(".product-list")
-productList.addEventListener("click", (event => {
-  if (event.target.matches(".remove-item")) {
-    const itemId = event.target.dataset.Id;
-    const cartItems = getLocalStorage("so-cart");
-    const updateCart = cartItems.filter((item) => item.Id !== itemId);
-    localStorage.setItem("so-cart", JSON.stringify(updateCart));
-    this.renderCartContents();
-  }
-}));
 
 function shoppingCartTemplate(item) {
-  const newItem = `
-  <div class="shopping-cart"
-  <div class="item">
-  <div class="buttons">
-          <span class="delete-btn"></span>
-          <span class="like-btn"></span>
-  <li class="cart-card divider">
-    <a href="#">
-      <h2 class="card__name">${item.Name}</h2>
-    </a>
-
-    <button type="button" class="quantity-button" data-action="decrease">-</button>
-    <input type="number" class="cart-card__quantity" name="quantity" value="1" min="1" max="10">
-    <button type="button" class="quantity-button" data-action="increase">+</button>
-  
-    <p class="cart-card__price">$${item.FinalPrice}</p>
-    <span class="remove-item" data-id="${item.Id}">X</span>
-  </li>
-  </div>
-  </div>
-  <button class="clear-cart-button">Clear Cart</button>
+  return `
+    <tr>
+        <td><b>${item.name}</b></td>
+        <td>Price: $${item.price.toFixed(2)}</td>
+        <td>Qty: ${item.qty}</td>
+        <td>Subtotal: $${(item.price * item.qty).toFixed(2)}</td>
+        <td style="width:20px"><button title="Increase quantity" class="clear-cart-button" type="button" onclick=_increaseQty('${item.id}')>+</button></td>
+        <td style="width:20px"><button title="Decrease quantity" class="clear-cart-button" type="button" onclick=_decreaseQty('${item.id}')>-</button></td>
+        <td style="width:20px"><button title="Delete item from cart" class="clear-cart-button" type="button" onclick=_deleteItem('${item.id}')>x</button></td>
+    </tr>
   `;
-
-  return newItem;
-  }
+}
 
 export default class ShoppingCart {
-  constructor(key, parentSelector) {
-    this.key = key;
+  
+  constructor(parentSelector) {
     this.parentSelector = parentSelector;
     this.total = 0;
+    this.list = [];
   }
+
+  getCartList() {
+    let arr = [];
+    for (let i = 0; i < localStorage.length; i ++) {
+      let cart = getLocalStorage(localStorage.key(i));     
+      if (cart != null && ('id' in cart) && ('qty' in cart)) {
+          arr.push(cart);
+      }
+    }
+    return arr;
+  }
+
+  increaseQty (id) {
+    let cart = getLocalStorage(id);
+    if (cart != null) {
+        cart.qty ++;
+        setLocalStorage(id, cart);
+    }
+  }
+  
+  decreaseQty (id) {
+    let cart = getLocalStorage(id);
+    if (cart != null) {
+        cart.qty--;
+        if (cart.qty <= 0) {
+            deleteLocalStorage(id)
+        } else {
+            setLocalStorage(id, cart); 
+        }
+    }
+  }
+  
+  deleteItem(id) {
+     deleteLocalStorage(id);
+  }
+
   async init() {
-    const list = getLocalStorage(this.key);
-    this.calculateListTotal(list);
-    this.renderCartContents(list);
+    this.list = this.getCartList();
+    this.calculateListTotal(this.list);
+    this.renderCartContents(this.list);
   }
+
   getQuantity(){
     let quantity = 0;
-    for(let i = 0; i < this.list.length; i += 1){
-      quantity += this.list[i].quantity;
+    for(let i = 0; i < this.list.length; i ++){
+      quantity += this.list[i].qty;
     }
     return quantity;
   }
+
   calculateListTotal(list) {
     if(!list){
-      return null;
+      return;
     }
-    const amounts = list.map((item) => item.FinalPrice);
-    this.total = amounts.reduce((sum, item) => sum + item);
+    const amounts = list.map((item) => item.qty * item.price);
+    if (amounts.length > 0) {
+        this.total = amounts.reduce((sum, item) => sum + item);
+    } else {
+        this.total = 0;
+    }
   }
+  
   renderCartContents() {
-
-    const cartItems = getLocalStorage(this.key);
-
-    if (cartItems != null) {
+    const cartItems = this.getCartList();
+    document.querySelector(".cart-total").innerText = "";
+    if (cartItems.length > 0) {
       const htmlItems = cartItems.map((item) => shoppingCartTemplate(item));
       document.querySelector(this.parentSelector).innerHTML = htmlItems.join("");
-      document.querySelector(".cart-total").innerText += ` $${this.total}`;
+      document.querySelector(".cart-total").innerText = `Total: $${this.total.toFixed(2)}`;
+      document.getElementById("cart-table").style.display='block';
     }
     else {
-      let div = document.createElement("div");
-      let p = document.createElement("p");
-      p.innerText = "Your cart is empty."
-      div.appendChild(p);
-      document.querySelector(".products").insertBefore(div, document.querySelector(this.parentSelector));
-
+      document.querySelector(".cart-total").innerText = "Your cart is empty";
+      document.querySelector(this.parentSelector).innerHTML = "";
+      document.getElementById("cart-table").style.display='none';
     }
   }
 
 }
 
- function calculateInCart() {
-   const cartItems = getLocalStorage("so-cart");
-   let myTotal = 0;
-   if (cartItems > 0) {
-    //create an object to use calculateOrderTotal object.calculateOrderTotal
-     myTotal = cartItems.calculateOrderTotal();
-   }
-   return myTotal;
- }
 
- //??????????????
-  let total = calculateInCart();
+ 

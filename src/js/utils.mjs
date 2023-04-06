@@ -1,3 +1,5 @@
+const STORAGE_KEY = "_CART_STORAGE_KEY_";
+
 // wrapper for querySelector...returns matching element
 export function qs(selector, parent = document) {
   return parent.querySelector(selector);
@@ -7,11 +9,21 @@ export function qs(selector, parent = document) {
 
 // retrieve data from localstorage
 export function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key));
+  return JSON.parse(localStorage.getItem(key || STORAGE_KEY)) || [];
 }
+
+export function getList() {
+  return JSON.parse(localStorage.getItem(STORAGE_KEY));
+}
+
 // save data to local storage
 export function setLocalStorage(key, data) {
-  localStorage.setItem(key, JSON.stringify(data));
+  localStorage.setItem(key || STORAGE_KEY, JSON.stringify(data));
+}
+
+// delete the specified key
+export function deleteLocalStorage(key) {
+  localStorage.removeItem(key || STORAGE_KEY);
 }
 
 // helper to get parameter strings
@@ -34,6 +46,7 @@ export function renderListWithTemplate(templateFn,parentElement,list,position = 
 
 // function to take an optional object and a template and insert the objects as HTML into the DOM
 export function renderWithTemplate(template, parentElement, data, callback) {
+  if (parentElement == null) return;
   parentElement.insertAdjacentHTML("afterbegin", template);
   //if there is a callback...call it and pass data
   if (callback) {
