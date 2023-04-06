@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,52 +8,38 @@
     <meta name="description" content="Eat Fresh Page created by
     Juliana Jesus Lemos in WDD 330 at
     Brigham Young University - Idaho">
-    <title>Bountiful Foods</title>
-    <link rel="shortcut icon" href="favicon.ico">
+    <title>Eat Fresh - Home</title>
+    <link rel="shortcut icon" href="./favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Secular+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js" type="module"></script>
 
 </head>
+
 <body>
-    <header>
-    <div>
-      <figure class="logo">
-        <img src="images/logo0.webp" alt="Eat Fresh Logo"
-        srcset="images/logo1.webp 1x, images/logo2.webp 2x,
-        images/logo3.webp 3x">
-     </figure>
-        <section class="headings">
-            <h1>Eat Fresh</h1>
+    <header class="active" id="main-header">
+    </header>
+    <div id="hero">
+        <div id="hero-box">
+            <picture>
+                <img id="hero-img" src="images/hero.webp" data-src="images/hero.webp" loading="lazy"
+                    alt="Fresh Fruits and Drinks">
+            </picture>
+        </div>
+        <section id="hero-msg">
+            <h1 class="home-title">EAT HEALTHY! DRINK FRESH!</h1>
+            <h4>Looking for healthier way of life? Check out our fruits and organic snacks!</h4>
+            <div class="button-box">
+                <a class="book" href="./product-listing/index.html">Buy Now</a>
+            </div>
         </section>
     </div>
-    <nav>
-        <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-                <ul id="primaryNav">
-                    <li class="active"><a href="./index.html">Home</a></li>
-                    <li><a href="./product-listing/index.html">Products</a></li>
-                    <li><a href="./aboutUs.html">About Us</a></li>
-                </ul>
-            </nav>
-    </header>
-        <div id="hero">
-            <div id="hero-box">
-                <picture>
-                    <img id="hero-img" src="images/hero.webp" data-src="images/hero.webp" loading ="lazy" alt="Fresh Fruits and Drinks">
-                </picture>
-            </div>
-            <section id="hero-msg">
-                <h1 class="home-title">EAT HEALTHY! DRINK FRESH!</h1>
-                <h4>Looking for healthier way of life? Check our fruits and organic snacks!</h4>
-                <div class="button-box">
-                    <a class="book" href="./product-listing/index.html">Buy Now</a>
-                </div>
-            </section>
-        </div>
     <main class="home-grid">
-        <div class="contact-us"><h1>Contact Us</h1>
+        <div class="contact-us">
+            <h1>Contact Us</h1>
             <p class="contact-us-paragraph-bold">Address</p>
             <p class="contact-us-paragraph">1050 Cannon Rd, Carlsbad, CA 92008, United States</p>
             <p class="contact-us-paragraph-bold">Phone Number</p>
@@ -60,57 +47,66 @@
             <p class="contact-us-paragraph-bold">Email</p>
             <p class="contact-us-paragraph">info@eatfresh.com</p>
         </div>
-        <div class="weather"><h1>Local Weather</h1>
+        <div class="weather">
+            <h1>Local Weather</h1>
             <P><span id="temperature"></span>&deg;F</P>
             <div><img src="#" alt="#" loading="lazy" id="weather-icon"></div>
-              <p class="contact-us-paragraph-bold">Condition </p>
-                <p><span id="description"></span></p>
-              <p class="contact-us-paragraph-bold">Humidity </p>
-              <p><span id="humidity"></span>%</p>
-          </div>
-          <div class="forecast">
-          <div id="forecast"><h1>Weather Forecast</h1>
-            <p>For the next three days</p>
-            <div id="forecasts"></div>
-          </div>
-         </div>
-          <div class="info-drinks"><h1>Delicious drinks, fruits and snacks!</h1>
-            <p class="info-drinks-paragraph">Our natural drinks and snacks bring many benefits. Nutrient-dense snacks and drinks, 
-                such as those rich in omega-3 fatty acids, can support brain health and improve cognitive function. 
-                Our products are a source of vitamins, minerals, and fiber. Our ingredients are selected, and our juices are free of preservatives.
+            <p class="contact-us-paragraph-bold">Condition </p>
+            <p><span id="description"></span></p>
+            <p class="contact-us-paragraph-bold">Humidity </p>
+            <p><span id="humidity"></span>%</p>
+        </div>
+        <div class="forecast">
+            <div id="forecast">
+                <h1>Weather Forecast</h1>
+                <p>For the next three days</p>
+                <div id="forecasts"></div>
+            </div>
+        </div>
+        <div class="info-drinks">
+            <h1>Delicious drinks, fruits and snacks!</h1>
+            <p class="info-drinks-paragraph">Our natural drinks and snacks bring many benefits. Nutrient-dense snacks
+                and drinks,
+                such as those rich in omega-3 fatty acids, can support brain health and improve cognitive function.
+                Our products are a source of vitamins, minerals, and fiber. Our ingredients are selected, and our juices
+                are free of preservatives.
             </p>
             <section id="drink-count">
-                <h1 class="drinks-made">Drinks made: </h1>
+                <h1 class="drinks-made">My Products: </h1>
                 <br>
                 <h1 class="drinks-made"><span id="drink-total">0</span></h1>
             </section>
-          </div>
-          <div class="info-california">
+        </div>
+        <div class="info-california">
+
             <picture>
-                <img id="info-california-img" src="images/info-california.webp" data-src="images/info-california.webp" loading="lazy" alt="Heisler Park">
+                <img id="info-california-img" src="images/info-california.webp" data-src="images/info-california.webp"
+                    loading="lazy" alt="Heisler Park">
             </picture>
+            <h1>Meet where we are located!</h1>
             <p class="info-california-paragraph">Southern California is known for its warm weather and beautiful
-            coastline on the Pacific Ocean. According to tourists, it is the perfect place for a vacation, with
-            incredible sites, including beaches, cliffs, calm bays, and wave-tossed shores.
+                coastline on the Pacific Ocean. According to tourists, it is the perfect place for a vacation, with
+                incredible sites, including beaches, cliffs, calm bays, and wave-tossed shores.
             </p>
             <br>
             <p class="info-california-paragraph">According to the Coastal Conservancy website, the region has high
-            levels of species diversity, many of which are unique to the region. Some fruits that grow well in Southern
-            Califórnia include mangos, guavas, pineapple guavas, peaches, nectarines and pears.
+                levels of species diversity, many of which are unique to the region. Some fruits that grow well in
+                Southern
+                California include mangos, guavas, pineapple guavas, peaches, nectarines and pears.
             </p>
-          </div>
+        </div>
     </main>
     <footer>
         <div class="container-footer">
             <div class="content-footer">
-            <div>
-                <h1>&copy;Eat Fresh - not a real business</h1>
-                <p>Juliana Lemos</p>
+                <div>
+                    <h1>&copy;Eat Fresh - not a real business</h1>
+                    <p>Juliana Lemos</p>
+                </div>
             </div>
+            <div class="container-footer">
+                <p>Weather Data by <a class="open-weather" href="https://openweathermap.org/">Open Weather</a></p>
             </div>
-          <div class="container-footer">
-            <p>Weather Data by <a class="open-weather" href="https://openweathermap.org/">Open Weather</a></p>
-          </div>
         </div>
         <div class="social">
             <a href="https://facebook.com" target="_blank">
@@ -124,10 +120,15 @@
             </a>
         </div>
     </footer>
+    <script src="js/number.js"></script>
     <script src="js/hamburgermenu.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/weather.js"></script>
-    <script src="js/mydrinks.js"></script>
-    <script src="js/lastmodified.js"></script>
+    <script src="js/active.js"></script>
+    <!-- <script src="js/mydrinks.js"></script> -->
+     <!-- <script src="js/number.js"></script> -->
+
+
 </body>
+
 </html>

@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Eat Fresh Page created by
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eat Fresh Page created by
     Juliana Jesus Lemos in WDD 330 at
     Brigham Young University - Idaho">
-    <title>Eat Fresh</title>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Secular+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/cart.js" type="module"></script>
-  </head>
+  <title>Shopping Cart</title>
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Secular+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/cart.js" type="module"></script>
+</head>
 
-  <body>
-    <header class="active" id="main-header"></header>
+<body>
+  <header class="active" id="main-header"></header>
+  <main class="divider">
 
-    <main class="divider">
-      <section class="products">
-        <h1 class="headings-cart">MY CART</h1>
+    <section class="products">
+      <h1 class="headings-cart">MY CART</h1>
 
-        <ul class="product-list"></ul>
-      
-        <div class="list-footer hide">
-          <p class="cart-total">Total: </p>
-        </div>
-      </section>
-    </main>
+      <table class="product-list" id="cart-table">
+
+      </table>
+
+      <div class="list-footer hide">
+        <p class="cart-total">TOTAL:</p>
+      </div>
+    </section>
+  </main>
 
   <footer id="main-footer">
   </footer>
-  
+  <script src="../js/active.js"></script>
+
 </body>
+
+</html>
