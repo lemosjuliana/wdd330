@@ -9,7 +9,7 @@
   "Id": "cb001",
   "Image": "cb001.jpg",
   "Name": "Cereal Bar",
-  "FinalPrice": 1.5
+  "FinalPrice": 1.45
   },
   {
   "Id": "gv001",
@@ -33,6 +33,6 @@
   "Id": "fp002",
   "Image": "fp002.jpg",
   "Name": "Citrus Fruits Pack",
-  "FinalPrice": 6.5
+  "FinalPrice": 6.55
   }
   ]

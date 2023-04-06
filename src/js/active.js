@@ -1,8 +1,12 @@
-let links = document.querySelectorAll("#primaryNav");
-let currentUrl = window.location.href;
+document.addEventListener("DOMContentLoaded", function() {
 
-links.forEach(function(link) {
+    const links = document.querySelectorAll("#primaryNav");
+    const currentUrl = window.location.href;
+
+    links.forEach(function(link) {
     if (link.href === currentUrl) {
-        link.classList.add("active");
+        link.parentNode.classList.add("active");
     }
+    });
+    console.log("JavaScript code is running on active!");
 });
